@@ -43,6 +43,7 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
+        background = "light",
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -79,6 +80,12 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      i = {
+        ["<M-BS>"] = { "<C-w>", desc = "Delete word" },
+      },
+      c = {
+        ["<M-BS>"] = { "<C-w>", desc = "Delete word" },
       },
     },
   },

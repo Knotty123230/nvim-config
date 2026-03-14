@@ -1,4 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- Customize Treesitter
 
@@ -9,6 +8,7 @@ return {
     ensure_installed = {
       "lua",
       "vim",
+      "zig",
       -- add more arguments for adding more treesitter parsers
     },
   },

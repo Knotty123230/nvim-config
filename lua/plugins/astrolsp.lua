@@ -11,7 +11,7 @@ return {
     -- Configuration table of features provided by AstroLSP
     features = {
       codelens = true, -- enable/disable codelens refresh on start
-      inlay_hints = false, -- enable/disable inlay hints on start
+      inlay_hints = true, -- enable/disable inlay hints on start
       semantic_tokens = true, -- enable/disable semantic token highlighting
     },
     -- customize lsp formatting options
@@ -43,6 +43,20 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      zls = {
+        settings = {
+          zls = {
+            enable_autofix = true,
+            enable_snippets = true,
+            warn_style = true,
+            enable_semantic_tokens = true,
+            enable_argument_placeholders = true,
+            operator_completions = true,
+            include_at_in_builtins = true,
+            max_completion_items = 100,
+          },
+        },
+      },
     },
     -- customize how language servers are attached
     handlers = {
