@@ -18,7 +18,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     fi
     echo -e "${GREEN}Installing dependencies via Homebrew (neovim, git, ripgrep, fd, node, openjdk@21)...${NC}"
-    brew install neovim git ripgrep fd node openjdk@21 || true
+    brew install --force-bottle neovim git ripgrep fd node openjdk@21 || true
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
     echo -e "${YELLOW}[1/4] Detecting Linux environment...${NC}"
     if command -v apt-get &>/dev/null; then
