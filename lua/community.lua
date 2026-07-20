@@ -7,5 +7,14 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.zig" },
-  -- import/override with your plugins folder
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.java" },
+  { import = "astrocommunity.pack.spring-boot" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.editing-support.undotree" },
+  { import = "astrocommunity.editing-support.todo-comments-nvim" },
+  -- { import = "astrocommunity.editing-support.inc-rename" },
+  { import = "astrocommunity.motion.flash-nvim" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
 }

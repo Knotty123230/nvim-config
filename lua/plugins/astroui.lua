@@ -13,7 +13,7 @@ local function get_omarchy_theme()
   return "catppuccin" -- за замовчуванням
 end
 
-local current_theme = "flexoki" -- get_omarchy_theme()
+local current_theme = "tokyonight-storm" -- get_omarchy_theme()
 -- Виправлення для тем
 if current_theme == "matte-black" then current_theme = "matteblack" end
 if current_theme == "tokyo-night" then current_theme = "tokyonight" end
@@ -26,14 +26,7 @@ return {
     -- change colorscheme
     colorscheme = current_theme,
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
-    highlights = {
-      init = { -- this table overrides highlights in all themes
-        -- Normal = { bg = "#000000" },
-      },
-      astrodark = { -- a table of overrides/changes when applying the astrotheme theme
-        -- Normal = { bg = "#000000" },
-      },
-    },
+    highlights = {},
     -- Icons can be configured throughout the interface
     icons = {
       -- configure the loading of the lsp in the status line

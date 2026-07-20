@@ -44,11 +44,14 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
         background = "light",
+        undofile = true, -- enable persistent undo
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+        resession_autocommands = true, -- enable resession autocommands
+        python3_host_prog = vim.fn.expand("~/.config/nvim/venv/bin/python3"),
       },
     },
     -- Mappings can be configured through AstroCore as well.
@@ -59,6 +62,8 @@ return {
         -- second key is the lefthand side of the map
 
         ["<Leader>o"] = { "<C-o>", desc = "Jump back (previous location)" },
+        ["<Leader>U"] = { "<cmd>UndotreeToggle<cr>", desc = "Toggle UndoTree" },
+        ["<Leader>rn"] = { function() return ":IncRename " .. vim.fn.expand "<cword>" end, expr = true, desc = "Live Rename" },
 
         -- navigate buffer tabs
         ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
